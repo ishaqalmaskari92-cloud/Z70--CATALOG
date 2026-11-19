@@ -1,0 +1,89 @@
+:root {
+    --bg-deep: #121212;
+    --bg-card: #1f1f1f;
+    --accent-grey: #333333;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --accent: #00ffcc55;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: var(--bg-card);
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-grey);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #181818;
+    overflow-x: auto;
+}
+nav button {
+    background-color: var(--accent-grey);
+    color: var(--text-main);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+nav button.active {
+    background-color: var(--text-main);
+    color: var(--bg-deep);
+    font-weight: bold;
+}
+.search-container {
+    padding: 20px;
+    text-align: center;
+}
+#searchBar {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--accent-grey);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+}
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+.card {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--accent-grey);
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.card-info {
+    padding: 10px;
+}
+.card-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+.card-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
